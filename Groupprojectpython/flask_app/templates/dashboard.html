@@ -57,9 +57,8 @@
                                         <form action="/become_worker" method="post" class="d-inline">
                                             <input type="hidden" value="{{ session['user_id'] }}" name="user_id_worker">
                                             <input type="hidden" value="{{ repair.id }}" name="repair_id">
-                                            <input type="submit" value="Claim Job!" class="btn btn-success btn-sm">
-                                        </form>
-                                    {% endif %}
+                                            <input type="submit" value="Claim Job!" class="btn btn-success btn-sm" style="width: 80px;">
+                                            {% endif %}
                                     {% if session['user_id'] == repair.user_id_worker and session['user_id'] != repair.user_id_posted %}
                                         <p class="mb-0">You are the worker</p>
                                     {% endif %}
