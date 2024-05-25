@@ -57,8 +57,8 @@ class Repair:
         if len(one_repair['description']) < 5:
             flash('Job Description must be 5 or more characters', 'danger')
             is_valid = False
-        if len(one_repair['phone']) < 5:
-            flash('Phone number must be 8 numbers', 'danger')
+        if len(one_repair['phone']) != 8 or not one_repair['phone'].isdigit():
+            flash('Phone number must be exactly 8 digits', 'danger')
             is_valid = False
         return is_valid
 
